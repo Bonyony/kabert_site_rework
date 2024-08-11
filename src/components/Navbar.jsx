@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import { useState } from "react";
 
@@ -6,38 +7,38 @@ const Menu = () => {
   return (
     <ul className="flex flex-row items-center gap-14 p-2  ">
       <li>
-        <a
+        <Link
           className={
-            "p-1 transition-all duration-100 rounded-lg " +
-            "bg-white bg-opacity-80 hover:bg-emerald-400"
+            "p-1 transition-all duration-100 rounded-md " +
+            " bg-opacity-80  hover:text-emerald-800"
           }
-          href="#home"
+          to="/"
         >
           Home
-        </a>
+        </Link>
       </li>
       <li>
-        <a
+        <Link
           className={
-            " p-1 transition-all duration-100 rounded-lg rounded-lg " +
-            "bg-white bg-opacity-80 hover:bg-emerald-400"
+            " p-1 transition-all duration-100 rounded-lg  " +
+            "bg-white bg-opacity-80 hover:bg-gray-200 hover:text-emerald-800"
           }
-          href="#projects"
+          to="/products"
         >
           Products
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           className={
             " p-1 transition-all duration-100 rounded-lg " +
-            "bg-white bg-opacity-80 hover:bg-emerald-400"
+            "bg-white bg-opacity-80 hover:bg-gray-200 hover:text-emerald-800"
           }
-          href="#contact"
+          to="/contact"
         >
           Contact
-        </a>
+        </Link>
       </li>
     </ul>
   );
@@ -47,38 +48,38 @@ const SmallMenu = () => {
   return (
     <ul className="flex flex-col items-end gap-5 mt-5   ">
       <li>
-        <a
+        <Link
           className={
             "p-1 transition-all duration-100 rounded-lg " +
-            "bg-white bg-opacity-80 hover:bg-emerald-400"
+            "bg-white bg-opacity-80 hover:bg-gray-200 hover:text-emerald-800"
           }
-          href="#home"
+          to="/"
         >
           Home
-        </a>
+        </Link>
       </li>
       <li>
-        <a
+        <Link
           className={
             "p-1 transition-all duration-100 rounded-lg " +
-            "bg-white bg-opacity-80 hover:bg-emerald-400"
+            "bg-white bg-opacity-80 hover:bg-gray-200 hover:text-emerald-800"
           }
-          href="#projects"
+          to="/products"
         >
           Products
-        </a>
+        </Link>
       </li>
 
       <li>
-        <a
+        <Link
           className={
             "p-1 transition-all duration-100 rounded-lg " +
-            "bg-white bg-opacity-80 hover:bg-emerald-400"
+            "bg-white bg-opacity-80 hover:bg-gray-200 hover:text-emerald-800"
           }
-          href="#contact"
+          to="/contact"
         >
           Contact
-        </a>
+        </Link>
       </li>
     </ul>
   );
@@ -89,19 +90,19 @@ const Navbar = () => {
 
   return (
     <div
-      className={`z-10 fixed top-0 w-full ${
+      className={`z-20 fixed top-0 w-full ${
         navbar && window.innerWidth < 768
           ? "bg-slate-200 bg-opacity-80"
-          : "bg-transparent"
+          : "bg-gray-200 bg-opacity-95 "
       } `}
     >
-      <div className=" flex flex-row justify-between pt-5 px-5 font-semibold text-lg">
-        <h1 className="text-2xl ml-1 mt-3 bg-gradient-to-r from-emerald-700 to-slate-700 text-transparent bg-clip-text">
-          Kabert Industries
+      <div className=" flex flex-row justify-between py-2 px-5 font-semibold text-lg">
+        <h1 className="text-4xl ml-1 font-black bg-gradient-to-r from-emerald-700 to-slate-700 text-transparent bg-clip-text">
+          Kabert Inc.
         </h1>
         <div className="md:hidden">
           <button
-            className="p-2 rounded-md outline-none flex items-end"
+            className="px-2 pb-2  rounded-md outline-none flex items-end"
             onClick={() => setNavbar(!navbar)}
           >
             {navbar ? (
